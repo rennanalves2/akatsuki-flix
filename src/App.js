@@ -1,6 +1,6 @@
 import RoutesApp from "./routes"
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <RoutesApp />

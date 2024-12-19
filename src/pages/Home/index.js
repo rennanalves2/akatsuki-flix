@@ -3,7 +3,7 @@ import api from "../../services/api";
 import "./home.css";
 import { Link } from "react-router-dom";
 
-function Home() {
+const Home = () => {
     const [characters, SetCharacters] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -40,7 +40,6 @@ function Home() {
                                 </div>                               
                                 <img src={character.images[0]} alt={character.name} />
                                 <div className="container-buttons">
-                                    <button>Salvar</button>
                                     <button><Link to={`character/${character.id}`}>Ver detalhes</Link></button>
                                 </div>          
                             </li>

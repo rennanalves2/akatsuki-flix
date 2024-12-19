@@ -57,6 +57,11 @@
     border-radius: 4px;
     cursor: pointer;
     color: #fff;
+    transition: all 0.5s;
+}
+
+.container-buttons button:hover {
+    background-color: #842e34;
 }
 
 .container-buttons a {

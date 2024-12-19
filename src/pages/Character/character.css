@@ -1,11 +1,36 @@
-.container-character {
-    width: 100%;
+.collumn {
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.container-character h2 {
+.collumn h2 {
     margin: 20px 0;
+}
+
+.collumn img {
+    width: 500px;
+    max-width: 100%;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.collumn button {
+    background-color: black;
+    color: #fff;
+    width: 100%;
+    max-width: 500px;
+    height: 50px;
+    border: 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+
+.collumn button:hover {
+    background-color: #2f2f2f;
 }
