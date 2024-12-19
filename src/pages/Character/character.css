@@ -1,0 +1,11 @@
+.container-character {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-character h2 {
+    margin: 20px 0;
+}

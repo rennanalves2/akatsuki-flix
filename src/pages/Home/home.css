@@ -37,7 +37,7 @@
 }
 
 .container ul li img {
-    width: 500px;
+    width: 400px;
 }
 
 .container-buttons {
@@ -57,4 +57,17 @@
     border-radius: 4px;
     cursor: pointer;
     color: #fff;
+}
+
+.container-buttons a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.container-loading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
 }
