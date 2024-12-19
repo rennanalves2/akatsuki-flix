@@ -5,7 +5,7 @@ function Header() {
     return (
         <header>
             <h1><Link to="/">Akatsuki members</Link></h1>
-            <span><Link to="/favorites">Meus personagens</Link></span>
+            <span><Link to="/favorites">My characters</Link></span>
         </header>
     )
 }

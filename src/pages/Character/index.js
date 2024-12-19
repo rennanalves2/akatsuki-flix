@@ -18,7 +18,7 @@ const Character = () => {
     }, []);
 
     const saveCharacter = () => {
-        const myList = localStorage.getItem("@akatsukiflix");
+        const myList = localStorage.getItem("@akatsuki-members");
         let saveCharacters = JSON.parse(myList) || [];   
         const hasCharacter = saveCharacters.some((saveCharacter) => saveCharacter.id == character.id);
         if(hasCharacter) {
@@ -26,7 +26,7 @@ const Character = () => {
             return;
         }
         saveCharacters.push(character);
-        localStorage.setItem("@akatsukiflix", JSON.stringify(saveCharacters));
+        localStorage.setItem("@akatsuki-members", JSON.stringify(saveCharacters));
         alert("Personagem salvo com sucesso!");
     }
 
