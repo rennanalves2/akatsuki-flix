@@ -2,6 +2,7 @@ import { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
 import api from "../../services/api";
 import "./character.css";
+import { toast } from "react-toastify";
 
 const Character = () => {
     const { id } = useParams();
@@ -15,19 +16,19 @@ const Character = () => {
         }
         loadCharacter();
         setLoading(false);
-    }, []);
+    }, [id]);
 
     const saveCharacter = () => {
         const myList = localStorage.getItem("@akatsuki-members");
         let saveCharacters = JSON.parse(myList) || [];   
-        const hasCharacter = saveCharacters.some((saveCharacter) => saveCharacter.id == character.id);
+        const hasCharacter = saveCharacters.some((saveCharacter) => saveCharacter.id === character.id);
         if(hasCharacter) {
-            alert("Esse personagem já está na sua lista!")
+            toast.warn("Esse personagem já está na sua lista!")
             return;
         }
         saveCharacters.push(character);
         localStorage.setItem("@akatsuki-members", JSON.stringify(saveCharacters));
-        alert("Personagem salvo com sucesso!");
+        toast.success("Personagem salvo com sucesso!");
     }
 
     if(loading) {
